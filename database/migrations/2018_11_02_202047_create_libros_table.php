@@ -15,12 +15,6 @@ class CreateLibrosTable extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('resumen');
-            $table->integer('npagina');
-            $table->integer('edicion');
-            $table->string('autor');
-            $table->decimal('precio',5,2);
             $table->timestamps();
         });
     }

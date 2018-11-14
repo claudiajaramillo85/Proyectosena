@@ -1,32 +1,22 @@
-
 @extends('layouts.app')
 
 
 @section('content')
 
-<div class="flex-center position-ref">
-    
-    <div class="content">
-        <div class="title m-b-md">
-            GESTIÓN DE PORTATILES
-        </div>
+<div class="container">               
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            
+                <div class="card-header-proyectosena text-lg-center">{{ __('INGRESO AL SISTEMA') }}</div>
 
-        <div class="links">
-            <a href="https://oferta.senasofiaplus.edu.co"><img src="imgs/logosena.png" width="100px"></a>
-            
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-            
                 <div class="card-body">
-                     <form method="POST" action="{{ route('login') }}">
                     
                         @csrf
 
                         <div class="form-group row">
-                            <label for="number" class="col-sm-6 col-form-label text-md-right">{{ __('Identificación') }}</label>
+                            <label for="number" class="col-sm-4 col-form-label text-md-right">{{ __('Documento de Identidad') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -38,9 +28,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-6 col-form-label text-md-right">{{ __('Contraseña') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -58,17 +48,15 @@
                                     {{ __('Ingresar') }}
                                 </button>
 
+                                <a class="btn btn-link-proyectosena" href="{{ route('password.request') }}">
+                                    {{ __('¿Olvidaste tu Contraseña?') }}
+                                </a>
                             </div>
                         </div>
                     
-                    </div>
-            
                 </div>
-            </form>
+            
         </div>
     </div>
 </div>
-
-
-
 @endsection
