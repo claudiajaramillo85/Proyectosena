@@ -12,10 +12,17 @@
 */
 
 Route::resource('libro', 'LibroController');
+Route::resource('equipo', 'EquipoController');
+
 
 Route::get('/', function(){
 	return view('welcome');
 });
+
+/*Route::get('/', function(){
+	return view('menu');
+});*/
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

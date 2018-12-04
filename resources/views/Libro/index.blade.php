@@ -5,37 +5,39 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="pull-left"><h3>Lista Libros</h3></div>
+          <div class="pull-left"><h3>Lista Portatiles</h3></div>
           <div class="pull-right">
             <div class="btn-group">
-              <a href="{{ route('libro.create') }}" class="btn btn-info" >Añadir Libro</a>
+              <a href="{{ route('equipo.create') }}" class="btn btn-info" >Añadir Portatiles</a>
             </div>
           </div>
           <div class="table-container">
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
-               <th>Nombre</th>
-               <th>Resumen</th>
-               <th>No. Páginas</th>
-               <th>Edicion</th>
-               <th>Autor</th>
-               <th>Precio</th>
+               <th>Codigo De Barras Equipo</th>
+               <th>Marca Portatil</th>
+               <th>Referencia Portatil</th>
+               <th>Serial Portatil</th>
+               <th>Serial Cargador</th>
+               <th>Novedades</th>
+               <th>Disponibilidad</th>
                <th>Editar</th>
                <th>Eliminar</th>
              </thead>
              <tbody>
-              @if($libros->count())  
-              @foreach($libros as $libro)  
+              @if($equipos->count())  
+              @foreach($equipos as $equipo)  
               <tr>
-                <td>{{$libro->nombre}}</td>
-                <td>{{$libro->resumen}}</td>
-                <td>{{$libro->npagina}}</td>
-                <td>{{$libro->edicion}}</td>
-                <td>{{$libro->autor}}</td>
-                <td>{{$libro->precio}}</td>
-                <td><a class="btn btn-primary btn-xs" href="{{action('LibroController@edit', $libro->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td>{{$equipo->codigo_barras_equipo}}</td>
+                <td>{{$equipo->marca_portatil}}</td>
+                <td>{{$equipo->referencia_portatil}}</td>
+                <td>{{$equipo->serial_portatil}}</td>
+                <td>{{$equipo->serial_cargador}}</td>
+                <td>{{$equipo->novedades}}</td>
+                <td>{{$equipo->disponibilidad}}</td>
+                <td><a class="btn btn-primary btn-xs" href="{{action('EquipoController@edit', $equipo->id_equipo)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                 <td>
-                  <form action="{{action('LibroController@destroy', $libro->id)}}" method="post">
+                  <form action="{{action('EquipoController@destroy', $equipo->id_equipo)}}" method="post">
                    {{csrf_field()}}
                    <input name="_method" type="hidden" value="DELETE">
 
@@ -49,11 +51,10 @@
               </tr>
               @endif
             </tbody>
-
           </table>
         </div>
       </div>
-      {{ $libros->links() }}
+      {{ $equipos->links() }}
     </div>
   </div>
 </section>

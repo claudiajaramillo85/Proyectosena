@@ -21,49 +21,56 @@
 
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nuevo Libro</h3>
+					<h3 class="panel-title">Nuevo Equipo</h3>
 				</div>
 				<div class="panel-body">					
 					<div class="table-container">
-						<form method="POST" action="{{ route('libro.update',$libro->id) }}"  role="form">
+						<form method="POST" action="{{ route('equipo.update',$equipos->id_equipo) }}"  role="form">
 							{{ csrf_field() }}
 							<input name="_method" type="hidden" value="PATCH">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="nombre" id="nombre" class="form-control input-sm" value="{{$libro->nombre}}">
+										<input type="text" name="codigo_barras_equipo" id="codigo_barras_equipo" class="form-control input-sm" value="{{$equipos->codigo_barras_equipo}}">
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="npagina" id="npagina" class="form-control input-sm" value="{{$libro->npagina}}">
+										<input type="text" name="marca_portatil" id="marca_portatil" class="form-control input-sm" value="{{$equipos->marca_portatil}}">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="referencia_portatil" id="referencia_portatil" class="form-control input-sm" value="{{$equipos->referencia_portatil}}">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="serial_portatil" id="serial_portatil" class="form-control input-sm" value="{{$equipos->serial_portatil}}">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="serial_cargador" id="serial_cargador" class="form-control input-sm" value="{{$equipos->serial_cargador}}">
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<textarea name="resumen" class="form-control input-sm"  placeholder="Resumen">{{$libro->resumen}}</textarea>
+								<textarea name="novedades" class="form-control input-sm"  placeholder="novedades">{{$equipos->novedades}}</textarea>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="edicion" id="edicion" class="form-control input-sm" value="{{$libro->edicion}}">
+										<input type="text" name="disponibilidad" id="disponibilidad" class="form-control input-sm" value="{{$equipos->disponibilidad}}">
 									</div>
 								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6">
-									<div class="form-group">
-										<input type="text" name="precio" id="precio" class="form-control input-sm" value="{{$libro->precio}}">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<textarea name="autor" class="form-control input-sm" placeholder="Autor">{{$libro->autor}}</textarea>
-							</div>
+							
 							<div class="row">
 
 								<div class="col-xs-12 col-sm-12 col-md-12">
 									<input type="submit"  value="Actualizar" class="btn btn-success btn-block">
-									<a href="{{ route('libro.index') }}" class="btn btn-info btn-block" >Atrás</a>
+									<a href="{{ route('equipo.index') }}" class="btn btn-info btn-block" >Atrás</a>
 								</div>	
 
 							</div>

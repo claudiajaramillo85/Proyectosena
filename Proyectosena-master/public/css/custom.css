@@ -1,0 +1,85 @@
+body {           
+    background: url(../imgs/background.jpg) no-repeat center bottom;
+    background-size: cover;  
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+    
+    
+}
+
+.title {
+    font-size: 56px;
+    color: #fc7323;
+}
+
+.links > a {
+    color: #238276;
+    padding: 0 25px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 5px;
+}
+
+
+.btn-proyectosena,
+.btn-outline-top-proyectosena {
+	background-color: #238276;
+	color: #fff;
+	border-radius: 25px;
+	margin-left: 4px;
+	transition: all 0.5s;
+}
+.btn-proyectosena:hover,
+.btn-outline-top-proyectosena:hover {
+	background-color: #fff;
+	color: #238276;
+}
+
+.card-header-proyectosena {
+	background-color: #8CDF2B;
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	border-radius: 25px;
+	color: #fff;
+	text-align: center;
+	line-height: 3em;
+	font-weight: 500;
+}
+
+.btn-link-proyectosena {
+	color: #fc7323;
+}
+.btn-link-proyectosena:hover {
+	color: #B64808;
+}
+
+
+
+
