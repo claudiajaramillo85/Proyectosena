@@ -13,6 +13,8 @@
 
 Route::resource('libro', 'LibroController');
 Route::resource('equipo', 'EquipoController');
+Route::resource('cargador', 'CargadorController');
+Route::resource('instructor', 'InstructorController');
 
 
 Route::get('/', function(){
